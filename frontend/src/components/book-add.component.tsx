@@ -64,6 +64,7 @@ export default class BookAdd extends Component<Props, State> {
         console.log(response.data);
       })
       .catch((e: Error) => {
+        toast.error(`Error in adding book: ${e}`);
         console.log(e);
       });
   }
